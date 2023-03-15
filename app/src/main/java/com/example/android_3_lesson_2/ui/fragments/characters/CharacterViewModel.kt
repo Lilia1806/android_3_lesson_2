@@ -24,7 +24,6 @@ class CharacterViewModel : ViewModel() {
                 call: retrofit2.Call<RickAndMortyResponse<CharacterModel>>,
                 t: Throwable
             ) {
-                Log.e("TAG", t.localizedMessage )
                 data.value = null
             }
 

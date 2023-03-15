@@ -32,7 +32,7 @@ class LocationsFragment : Fragment() {
     }
 
     private fun initialize() {
-        binding.rvCharacter.apply {
+        binding.rvLocations.apply {
             layoutManager = LinearLayoutManager(requireContext())
             adapter = locationsAdapter
         }

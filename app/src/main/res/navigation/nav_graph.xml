@@ -10,14 +10,17 @@
         android:name="com.example.android_3_lesson_2.ui.fragments.characters.CharacterFragment"
         android:label="fragment_character"
         tools:layout="@layout/fragment_character" />
+
     <fragment
         android:id="@+id/locationsFragment2"
         android:name="com.example.android_3_lesson_2.ui.fragments.locations.LocationsFragment"
         android:label="fragment_locations"
         tools:layout="@layout/fragment_locations" />
+
     <fragment
         android:id="@+id/episodesFragment2"
         android:name="com.example.android_3_lesson_2.ui.fragments.episodes.EpisodesFragment"
         android:label="fragment_episodes"
         tools:layout="@layout/fragment_episodes" />
+
 </navigation>

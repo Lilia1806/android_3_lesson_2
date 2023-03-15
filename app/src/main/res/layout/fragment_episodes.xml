@@ -7,7 +7,7 @@
     tools:context=".ui.fragments.episodes.EpisodesFragment">
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_character"
+        android:id="@+id/rv_episodes"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:listitem="@layout/item_episodes" />

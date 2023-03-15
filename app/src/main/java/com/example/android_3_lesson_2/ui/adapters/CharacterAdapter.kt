@@ -1,5 +1,6 @@
 package com.example.android_3_lesson_2.ui.adapters
 
+import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
@@ -11,6 +12,7 @@ class CharacterAdapter : RecyclerView.Adapter<CharacterAdapter.ViewHolder>() {
 
     private var list: List<CharacterModel> = ArrayList()
 
+    @SuppressLint("NotifyDataSetChanged")
     fun setList(list: List<CharacterModel>) {
         this.list = list
         notifyDataSetChanged()
@@ -20,7 +22,8 @@ class CharacterAdapter : RecyclerView.Adapter<CharacterAdapter.ViewHolder>() {
         RecyclerView.ViewHolder(binding.root) {
 
         fun onBind(characterModel: CharacterModel) {
-            Glide.with(binding.itemCharacterImage.context).load(characterModel.image).into(binding.itemCharacterImage)
+            Glide.with(binding.itemCharacterImage.context).load(characterModel.image)
+                .into(binding.itemCharacterImage)
             binding.itemCharacterName.text = characterModel.name
             binding.itemCharacterStatus.text = characterModel.status
             binding.itemCharacterSpecies.text = characterModel.species

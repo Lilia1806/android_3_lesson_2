@@ -8,13 +8,13 @@
     android:background="@color/light_grey">
 
     <TextView
-        android:id="@+id/created"
+        android:id="@+id/created_title"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_marginStart="10dp"
         android:text="created: "
         android:textColor="@color/light_light_grey"
-        android:textSize="15dp"
+        android:textSize="15sp"
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="MissingConstraints" />
 
@@ -24,17 +24,17 @@
         android:layout_height="match_parent"
         android:text="episode"
         android:textColor="@color/white"
-        android:textSize="15dp"
-        app:layout_constraintStart_toEndOf="@id/created" />
+        android:textSize="15sp"
+        app:layout_constraintStart_toEndOf="@id/created_title" />
 
     <TextView
-        android:id="@+id/name"
+        android:id="@+id/name_title"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_marginStart="10dp"
         android:text="name: "
         android:textColor="@color/light_light_grey"
-        android:textSize="15dp"
+        android:textSize="15sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/item_episodes_created"
         tools:ignore="MissingConstraints" />
@@ -45,20 +45,20 @@
         android:layout_height="match_parent"
         android:text="name"
         android:textColor="@color/white"
-        android:textSize="15dp"
-        app:layout_constraintStart_toEndOf="@id/name"
-        app:layout_constraintTop_toTopOf="@+id/name" />
+        android:textSize="15sp"
+        app:layout_constraintStart_toEndOf="@id/name_title"
+        app:layout_constraintTop_toTopOf="@+id/name_title" />
 
     <TextView
-        android:id="@+id/air_date"
+        android:id="@+id/air_date_title"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_marginStart="10dp"
         android:text="air_date: "
         android:textColor="@color/light_light_grey"
-        android:textSize="15dp"
+        android:textSize="15sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/name"
+        app:layout_constraintTop_toBottomOf="@id/name_title"
         tools:ignore="MissingConstraints" />
 
     <TextView
@@ -67,20 +67,20 @@
         android:layout_height="match_parent"
         android:text="air_date"
         android:textColor="@color/white"
-        android:textSize="15dp"
-        app:layout_constraintStart_toEndOf="@id/air_date"
-        app:layout_constraintTop_toTopOf="@+id/air_date" />
+        android:textSize="15sp"
+        app:layout_constraintStart_toEndOf="@id/air_date_title"
+        app:layout_constraintTop_toTopOf="@+id/air_date_title" />
 
     <TextView
-        android:id="@+id/url"
+        android:id="@+id/url_title"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_marginStart="10dp"
         android:text="url: "
         android:textColor="@color/light_light_grey"
-        android:textSize="15dp"
+        android:textSize="15sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/air_date"
+        app:layout_constraintTop_toBottomOf="@id/air_date_title"
         tools:ignore="MissingConstraints" />
 
     <TextView
@@ -89,8 +89,8 @@
         android:layout_height="match_parent"
         android:text="url"
         android:textColor="@color/white"
-        android:textSize="15dp"
-        app:layout_constraintStart_toEndOf="@id/url"
-        app:layout_constraintTop_toTopOf="@+id/url" />
+        android:textSize="15sp"
+        app:layout_constraintStart_toEndOf="@id/url_title"
+        app:layout_constraintTop_toTopOf="@+id/url_title" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

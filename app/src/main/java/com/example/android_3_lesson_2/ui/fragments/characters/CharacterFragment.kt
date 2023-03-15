@@ -12,8 +12,8 @@ import com.example.android_3_lesson_2.ui.adapters.CharacterAdapter
 
 class CharacterFragment : Fragment() {
 
-    private var viewModel : CharacterViewModel? = null
-    private lateinit var binding : FragmentCharacterBinding
+    private var viewModel: CharacterViewModel? = null
+    private lateinit var binding: FragmentCharacterBinding
     private var characterAdapter = CharacterAdapter()
 
     override fun onCreateView(

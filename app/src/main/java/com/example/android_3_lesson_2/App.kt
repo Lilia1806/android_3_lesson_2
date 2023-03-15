@@ -9,6 +9,7 @@ import com.example.android_3_lesson_2.data.network.apiservices.LocationsApiServi
 class App : Application() {
 
     companion object {
+        val retrofitClient = RetrofitClient()
         var characterApiService: CharacterApiService? = null
         var episodesApiService: EpisodesApiService? = null
         var locationApiService: LocationsApiService? = null
@@ -16,8 +17,8 @@ class App : Application() {
 
     override fun onCreate() {
         super.onCreate()
-        characterApiService = RetrofitClient().provideCharacterApiService()
-        episodesApiService = RetrofitClient().provideEpisodeApiService()
-        locationApiService = RetrofitClient().provideLocationApiService()
+        characterApiService = retrofitClient.provideCharacterApiService()
+        episodesApiService = retrofitClient.provideEpisodeApiService()
+        locationApiService = retrofitClient.provideLocationApiService()
     }
 }

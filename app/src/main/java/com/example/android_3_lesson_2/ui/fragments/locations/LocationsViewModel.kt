@@ -24,8 +24,6 @@ class LocationsViewModel : ViewModel() {
                 call: retrofit2.Call<RickAndMortyResponse<LocationModel>>,
                 t: Throwable
             ) {
-                Log.e("TAG", t.localizedMessage )
-
                 data.value = null
             }
 

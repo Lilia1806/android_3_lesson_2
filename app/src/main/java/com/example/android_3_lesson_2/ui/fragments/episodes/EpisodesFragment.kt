@@ -32,7 +32,7 @@ class EpisodesFragment : Fragment() {
     }
 
     private fun initialize() {
-        binding.rvCharacter.apply {
+        binding.rvEpisodes.apply {
             layoutManager = LinearLayoutManager(requireContext())
             adapter = episodesAdapter
         }

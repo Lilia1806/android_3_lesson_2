@@ -8,13 +8,13 @@
     android:background="@color/light_grey">
 
     <TextView
-        android:id="@+id/name_location"
+        android:id="@+id/name_location_title"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_marginStart="10dp"
         android:text="id: "
         android:textColor="@color/light_light_grey"
-        android:textSize="15dp"
+        android:textSize="15sp"
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="MissingConstraints" />
 
@@ -24,17 +24,17 @@
         android:layout_height="match_parent"
         android:text="id"
         android:textColor="@color/white"
-        android:textSize="15dp"
-        app:layout_constraintStart_toEndOf="@id/name_location" />
+        android:textSize="15sp"
+        app:layout_constraintStart_toEndOf="@id/name_location_title" />
 
     <TextView
-        android:id="@+id/type"
+        android:id="@+id/type_title"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_marginStart="10dp"
         android:text="name: "
         android:textColor="@color/light_light_grey"
-        android:textSize="15dp"
+        android:textSize="15sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/item_location_name"
         tools:ignore="MissingConstraints" />
@@ -45,20 +45,20 @@
         android:layout_height="match_parent"
         android:text="name"
         android:textColor="@color/white"
-        android:textSize="15dp"
-        app:layout_constraintStart_toEndOf="@id/type"
-        app:layout_constraintTop_toTopOf="@+id/type" />
+        android:textSize="15sp"
+        app:layout_constraintStart_toEndOf="@id/type_title"
+        app:layout_constraintTop_toTopOf="@+id/type_title" />
 
     <TextView
-        android:id="@+id/dimension"
+        android:id="@+id/dimension_title"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_marginStart="10dp"
         android:text="air_date: "
         android:textColor="@color/light_light_grey"
-        android:textSize="15dp"
+        android:textSize="15sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/type"
+        app:layout_constraintTop_toBottomOf="@id/type_title"
         tools:ignore="MissingConstraints" />
 
     <TextView
@@ -67,20 +67,20 @@
         android:layout_height="match_parent"
         android:text="air_date"
         android:textColor="@color/white"
-        android:textSize="15dp"
-        app:layout_constraintStart_toEndOf="@id/dimension"
-        app:layout_constraintTop_toTopOf="@+id/dimension" />
+        android:textSize="15sp"
+        app:layout_constraintStart_toEndOf="@id/dimension_title"
+        app:layout_constraintTop_toTopOf="@+id/dimension_title" />
 
     <TextView
-        android:id="@+id/url_location"
+        android:id="@+id/url_location_title"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_marginStart="10dp"
         android:text="url: "
         android:textColor="@color/light_light_grey"
-        android:textSize="15dp"
+        android:textSize="15sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/dimension"
+        app:layout_constraintTop_toBottomOf="@id/dimension_title"
         tools:ignore="MissingConstraints" />
 
     <TextView
@@ -89,8 +89,8 @@
         android:layout_height="match_parent"
         android:text="url"
         android:textColor="@color/white"
-        android:textSize="15dp"
-        app:layout_constraintStart_toEndOf="@id/url_location"
-        app:layout_constraintTop_toTopOf="@+id/url_location" />
+        android:textSize="15sp"
+        app:layout_constraintStart_toEndOf="@id/url_location_title"
+        app:layout_constraintTop_toTopOf="@+id/url_location_title" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
