@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:background="@color/light_grey">
+
+    <ImageView
+        android:id="@+id/item_character_image"
+        android:layout_width="130dp"
+        android:layout_height="140dp"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/item_character_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/item_character_image"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="cjndfndnf" />
+
+    <TextView
+        android:id="@+id/status"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginStart="5dp"
+        android:text="status:"
+        android:textColor="@color/light_light_grey"
+        android:textSize="15dp"
+        app:layout_constraintStart_toEndOf="@id/item_character_image"
+        app:layout_constraintTop_toBottomOf="@id/item_character_name" />
+
+    <TextView
+        android:id="@+id/item_character_status"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginStart="5dp"
+        android:text="status"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        app:layout_constraintStart_toEndOf="@id/item_character_image"
+        app:layout_constraintTop_toBottomOf="@id/status" />
+
+    <TextView
+        android:id="@+id/species"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginStart="5dp"
+        android:text="species:"
+        android:textColor="@color/light_light_grey"
+        android:textSize="15dp"
+        app:layout_constraintStart_toEndOf="@id/item_character_image"
+        app:layout_constraintTop_toBottomOf="@id/item_character_status" />
+
+    <TextView
+        android:id="@+id/item_character_species"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginStart="5dp"
+        android:text="species"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        app:layout_constraintStart_toEndOf="@id/item_character_image"
+        app:layout_constraintTop_toBottomOf="@id/species" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
