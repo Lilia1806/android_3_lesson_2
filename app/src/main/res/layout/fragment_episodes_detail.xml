@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey"
+    tools:context=".ui.fragments.episodes.detail.EpisodeDetailFragment">
+
+    <TextView
+        android:id="@+id/item_episodes_detail_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginVertical="200dp"
+        android:padding="10dp"
+        android:textColor="@color/white"
+        android:textSize="26sp"
+        android:textStyle="italic|bold"
+        tools:text="NAME" />
+
+    <TextView
+        android:id="@+id/item_episodes_detail_air_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginVertical="250dp"
+        android:padding="10dp"
+        android:textColor="@color/white"
+        android:textSize="26sp"
+        android:textStyle="italic|bold"
+        tools:text="AIR_DATE" />
+
+</FrameLayout>

@@ -5,15 +5,14 @@ import android.view.ViewGroup
 import androidx.paging.PagingDataAdapter
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
-import com.example.android_3_lesson_2.databinding.ItemCharacterBinding
-import com.example.android_3_lesson_2.extension.setImage
-import com.example.android_3_lesson_2.models.CharacterModel
+import com.example.android_3_lesson_2.databinding.ItemEpisodesBinding
+import com.example.android_3_lesson_2.models.EpisodeModel
 
-class CharacterAdapter(
-    val onItemClick: (id: Int) -> Unit
-) : PagingDataAdapter<CharacterModel, CharacterAdapter.ViewHolder>(diffUtil) {
+class EpisodeAdapter(
+    val onItemClick: (Id: Int) -> Unit
+) : PagingDataAdapter<EpisodeModel, EpisodeAdapter.ViewHolder>(diffUtil) {
 
-    inner class ViewHolder(private val binding: ItemCharacterBinding) :
+    inner class ViewHolder(private val binding: ItemEpisodesBinding) :
         RecyclerView.ViewHolder(binding.root) {
 
         init {
@@ -22,17 +21,17 @@ class CharacterAdapter(
             }
         }
 
-        fun onBind(characterModel: CharacterModel) {
-            binding.itemCharacterImage.setImage(characterModel.image)
-            binding.itemCharacterName.text = characterModel.name
-            binding.itemCharacterStatus.text = characterModel.status
-            binding.itemCharacterSpecies.text = characterModel.species
+        fun onBind(episodeModel: EpisodeModel) {
+            binding.itemEpisodesCreated.text = episodeModel.created
+            binding.itemEpisodesName.text = episodeModel.name
+            binding.itemEpisodesAirDate.text = episodeModel.air_date
+            binding.itemEpisodesAirUrl.text = episodeModel.url
         }
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         return ViewHolder(
-            ItemCharacterBinding.inflate(
+            ItemEpisodesBinding.inflate(
                 LayoutInflater.from(
                     parent.context
                 ), parent, false
@@ -45,17 +44,17 @@ class CharacterAdapter(
     }
 
     companion object {
-        private val diffUtil = object : DiffUtil.ItemCallback<CharacterModel>() {
+        private val diffUtil = object : DiffUtil.ItemCallback<EpisodeModel>() {
             override fun areItemsTheSame(
-                oldItem: CharacterModel,
-                newItem: CharacterModel,
+                oldItem: EpisodeModel,
+                newItem: EpisodeModel,
             ): Boolean {
                 return oldItem == newItem
             }
 
             override fun areContentsTheSame(
-                oldItem: CharacterModel,
-                newItem: CharacterModel,
+                oldItem: EpisodeModel,
+                newItem: EpisodeModel,
             ): Boolean {
                 return oldItem.id == newItem.id
             }

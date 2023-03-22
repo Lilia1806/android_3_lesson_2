@@ -5,15 +5,14 @@ import android.view.ViewGroup
 import androidx.paging.PagingDataAdapter
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
-import com.example.android_3_lesson_2.databinding.ItemCharacterBinding
-import com.example.android_3_lesson_2.extension.setImage
-import com.example.android_3_lesson_2.models.CharacterModel
+import com.example.android_3_lesson_2.databinding.ItemLocationsBinding
+import com.example.android_3_lesson_2.models.LocationModel
 
-class CharacterAdapter(
-    val onItemClick: (id: Int) -> Unit
-) : PagingDataAdapter<CharacterModel, CharacterAdapter.ViewHolder>(diffUtil) {
+class LocationAdapter(
+    val onItemClick: (Id: Int) -> Unit
+) :  PagingDataAdapter<LocationModel, LocationAdapter.ViewHolder>(diffUtil)  {
 
-    inner class ViewHolder(private val binding: ItemCharacterBinding) :
+    inner class ViewHolder(private val binding: ItemLocationsBinding) :
         RecyclerView.ViewHolder(binding.root) {
 
         init {
@@ -22,17 +21,17 @@ class CharacterAdapter(
             }
         }
 
-        fun onBind(characterModel: CharacterModel) {
-            binding.itemCharacterImage.setImage(characterModel.image)
-            binding.itemCharacterName.text = characterModel.name
-            binding.itemCharacterStatus.text = characterModel.status
-            binding.itemCharacterSpecies.text = characterModel.species
+        fun onBind(locationModel: LocationModel) {
+            binding.itemLocationName.text = locationModel.name
+            binding.itemLocationType.text = locationModel.type
+            binding.itemLocationDimension.text = locationModel.dimension
+            binding.itemLocationUrl.text = locationModel.url
         }
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         return ViewHolder(
-            ItemCharacterBinding.inflate(
+            ItemLocationsBinding.inflate(
                 LayoutInflater.from(
                     parent.context
                 ), parent, false
@@ -45,17 +44,17 @@ class CharacterAdapter(
     }
 
     companion object {
-        private val diffUtil = object : DiffUtil.ItemCallback<CharacterModel>() {
+        private val diffUtil = object : DiffUtil.ItemCallback<LocationModel>() {
             override fun areItemsTheSame(
-                oldItem: CharacterModel,
-                newItem: CharacterModel,
+                oldItem: LocationModel,
+                newItem: LocationModel,
             ): Boolean {
                 return oldItem == newItem
             }
 
             override fun areContentsTheSame(
-                oldItem: CharacterModel,
-                newItem: CharacterModel,
+                oldItem: LocationModel,
+                newItem: LocationModel,
             ): Boolean {
                 return oldItem.id == newItem.id
             }

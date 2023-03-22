@@ -1,8 +1,8 @@
 package com.example.android_3_lesson_2.data.network
 
 import com.example.android_3_lesson_2.data.network.apiservices.CharacterApiService
-import com.example.android_3_lesson_2.data.network.apiservices.EpisodesApiService
-import com.example.android_3_lesson_2.data.network.apiservices.LocationsApiService
+import com.example.android_3_lesson_2.data.network.apiservices.EpisodeApiService
+import com.example.android_3_lesson_2.data.network.apiservices.LocationApiService
 import okhttp3.OkHttpClient
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
@@ -25,11 +25,11 @@ class RetrofitClient {
         return retrofitClient.create(CharacterApiService::class.java)
     }
 
-    fun provideLocationApiService(): LocationsApiService {
-        return retrofitClient.create(LocationsApiService::class.java)
+    fun provideLocationApiService(): LocationApiService {
+        return retrofitClient.create(LocationApiService::class.java)
     }
 
-    fun provideEpisodeApiService(): EpisodesApiService {
-        return retrofitClient.create(EpisodesApiService::class.java)
+    fun provideEpisodeApiService(): EpisodeApiService {
+        return retrofitClient.create(EpisodeApiService::class.java)
     }
 }
