@@ -2,15 +2,15 @@ package com.example.android_3_lesson_2.ui.adapters
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import androidx.paging.PagingDataAdapter
 import androidx.recyclerview.widget.DiffUtil
+import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.example.android_3_lesson_2.databinding.ItemLocationsBinding
 import com.example.android_3_lesson_2.models.LocationModel
 
 class LocationAdapter(
     val onItemClick: (Id: Int) -> Unit
-) :  PagingDataAdapter<LocationModel, LocationAdapter.ViewHolder>(diffUtil)  {
+) : ListAdapter<LocationModel, LocationAdapter.ViewHolder>(diffUtil) {
 
     inner class ViewHolder(private val binding: ItemLocationsBinding) :
         RecyclerView.ViewHolder(binding.root) {

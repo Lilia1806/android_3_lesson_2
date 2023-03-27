@@ -2,6 +2,8 @@ plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
     id 'androidx.navigation.safeargs'
+    id 'kotlin-kapt'
+    id 'com.google.dagger.hilt.android'
 }
 
 android {
@@ -79,4 +81,17 @@ dependencies {
     // paging 3
     def paging_version = "3.1.1"
     implementation "androidx.paging:paging-runtime:$paging_version"
+
+    //hilt
+    def hilt_version = "2.45"
+    implementation "com.google.dagger:hilt-android:2.45"
+    kapt "com.google.dagger:hilt-compiler:2.45"
+
+    //Room
+    def room_version = "2.4.3"
+
+    //noinspection GradleDependency
+    implementation "androidx.room:room-runtime:$room_version"
+    kapt "androidx.room:room-compiler:$room_version"
+
 }

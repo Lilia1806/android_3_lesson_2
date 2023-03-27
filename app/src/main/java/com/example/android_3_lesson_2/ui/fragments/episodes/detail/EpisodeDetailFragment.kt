@@ -6,13 +6,14 @@ import by.kirich1409.viewbindingdelegate.viewBinding
 import com.example.android_3_lesson_2.R
 import com.example.android_3_lesson_2.base.BaseFragment
 import com.example.android_3_lesson_2.databinding.FragmentEpisodesDetailBinding
-import com.example.android_3_lesson_2.ui.fragments.episodes.EpisodeViewModel
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class EpisodeDetailFragment :
-    BaseFragment<FragmentEpisodesDetailBinding, EpisodeViewModel>(R.layout.fragment_episodes_detail) {
+    BaseFragment<FragmentEpisodesDetailBinding, EpisodeDetailViewModel>(R.layout.fragment_episodes_detail) {
 
     override val binding by viewBinding(FragmentEpisodesDetailBinding::bind)
-    override val viewModel: EpisodeViewModel by viewModels()
+    override val viewModel: EpisodeDetailViewModel by viewModels()
     private val args: EpisodeDetailFragmentArgs by navArgs()
 
     override fun setupObserves() {

@@ -1,20 +1,16 @@
 package com.example.android_3_lesson_2.ui.fragments.characters
 
-import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import androidx.lifecycle.viewModelScope
-import androidx.paging.cachedIn
 import com.example.android_3_lesson_2.data.repositories.CharacterRepository
-import com.example.android_3_lesson_2.models.CharacterModel
-import com.example.android_3_lesson_2.models.RickAndMortyResponse
+import dagger.hilt.android.lifecycle.HiltViewModel
+import javax.inject.Inject
 
-class CharacterViewModel : ViewModel() {
+@HiltViewModel
+class CharacterViewModel @Inject constructor(
+    private val characterRepository: CharacterRepository
+) : ViewModel() {
 
-    private val characterRepository = CharacterRepository()
+    fun fetchCharacter() = characterRepository.fetchCharacter()
 
-    fun fetchCharacter() = characterRepository.fetchCharacter().cachedIn(viewModelScope)
-
-    fun fetchCharacterDetail(id: Int): MutableLiveData<CharacterModel> {
-        return characterRepository.fetchCharacterDetail(id)
-    }
+    fun getAll() = characterRepository.getAll()
 }
