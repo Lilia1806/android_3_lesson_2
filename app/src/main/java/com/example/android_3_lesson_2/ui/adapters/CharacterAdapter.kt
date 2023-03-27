@@ -2,8 +2,8 @@ package com.example.android_3_lesson_2.ui.adapters
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import androidx.paging.PagingDataAdapter
 import androidx.recyclerview.widget.DiffUtil
+import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.example.android_3_lesson_2.databinding.ItemCharacterBinding
 import com.example.android_3_lesson_2.extension.setImage
@@ -11,7 +11,7 @@ import com.example.android_3_lesson_2.models.CharacterModel
 
 class CharacterAdapter(
     val onItemClick: (id: Int) -> Unit
-) : PagingDataAdapter<CharacterModel, CharacterAdapter.ViewHolder>(diffUtil) {
+) : ListAdapter<CharacterModel, CharacterAdapter.ViewHolder>(diffUtil) {
 
     inner class ViewHolder(private val binding: ItemCharacterBinding) :
         RecyclerView.ViewHolder(binding.root) {

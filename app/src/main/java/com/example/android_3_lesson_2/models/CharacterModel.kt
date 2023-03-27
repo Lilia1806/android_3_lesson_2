@@ -1,10 +1,14 @@
 package com.example.android_3_lesson_2.models
 
+import androidx.room.Entity
+import androidx.room.PrimaryKey
 import com.google.gson.annotations.SerializedName
 
+@Entity(tableName = "characterModel")
 data class CharacterModel(
 
     @SerializedName("id")
+    @PrimaryKey(autoGenerate = true)
     val id: Int,
 
     @SerializedName("image")
@@ -18,4 +22,7 @@ data class CharacterModel(
 
     @SerializedName("species")
     val species: String,
+
+    @SerializedName("origin")
+    val origin: Any
 )
